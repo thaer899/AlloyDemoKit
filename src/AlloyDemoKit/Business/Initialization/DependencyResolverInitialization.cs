@@ -1,13 +1,16 @@
+using System;
+using System.Web;
 using System.Web.Mvc;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using AlloyDemoKit.Business.Rendering;
-using AlloyDemoKit.Helpers;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
 using StructureMap;
 using AlloyDemoKit.Business.Data;
+using EPiServer.Core;
+using EPiServer.Globalization;
 
 namespace AlloyDemoKit.Business.Initialization
 {
@@ -30,6 +33,12 @@ namespace AlloyDemoKit.Business.Initialization
 
             //Implementations for custom interfaces can be registered here.
             container.For<IFileDataImporter>().Use<FileDataImporter>();
+
+            container.For<IUpdateCurrentLanguage>()
+                .Singleton()
+                .Use<LanguageService>()
+                .Setter<IUpdateCurrentLanguage>()
+                .Is(x => x.GetInstance<UpdateCurrentLanguage>());
         }
 
         public void Initialize(InitializationEngine context)
@@ -42,6 +51,26 @@ namespace AlloyDemoKit.Business.Initialization
 
         public void Preload(string[] parameters)
         {
+        }
+    }
+
+    public class LanguageService : IUpdateCurrentLanguage
+    {
+        private readonly IUpdateCurrentLanguage _defaultUpdateCurrentLanguage;
+
+        public LanguageService(IUpdateCurrentLanguage defaultUpdateCurrentLanguage)
+        {
+            _defaultUpdateCurrentLanguage = defaultUpdateCurrentLanguage;
+        }
+
+        public void UpdateLanguage(string languageId)
+        {
+            _defaultUpdateCurrentLanguage.UpdateLanguage("sv");
+        }
+
+        public void UpdateReplacementLanguage(IContent currentContent, string requestedLanguage)
+        {
+            _defaultUpdateCurrentLanguage.UpdateReplacementLanguage(currentContent, "sv");
         }
     }
 }
