@@ -3,3 +3,4 @@ RUN Add-WindowsFeature Web-WebSockets
 ARG source
 WORKDIR /inetpub/wwwroot
 COPY ${source:-obj/Docker/publish} .
+RUN icacls ./* /grant everyone:F /T
