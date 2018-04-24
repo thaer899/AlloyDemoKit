@@ -2,20 +2,22 @@ version: '3'
 
 services:
   alloydemokit:
-    image: alloydemokit
+    image: brianweet/alloydemokit:v2
     build:
       context: .\AlloyDemoKit
       dockerfile: Dockerfile
     networks:
       - alloy-network
   alloydemokit-db:
-    image: microsoft/mssql-server-windows-developer
+    image: brianweet/alloydemokit-db:v2
+    build:
+      context: .
+      dockerfile: ./Database/Dockerfile
     ports:
       - "1433:1433"
     environment: 
       - ACCEPT_EULA=Y
       - sa_password=All0yDemokit!
-      - attach_dbs="[{'dbName':'alloydemokit','dbFiles':['C:\\data\\alloydemokit.mdf','C:\\data\\alloydemokit_log.ldf']}]"
     volumes:
       - ./AlloyDemoKit/App_Data:C:/data/
     networks:
