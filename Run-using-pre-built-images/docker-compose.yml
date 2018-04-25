@@ -2,21 +2,16 @@ version: '3'
 
 services:
   alloydemokit:
-    image: brianweet/alloydemokit:test
-    ports:
-      - "80:80"
+    image: brianweet/alloydemokit:v2
     networks:
       - alloy-network
     depends_on:
       - alloydemokit-db
   alloydemokit-db:
-    image: brianweet/alloydemokit-db:test
-    ports:
-      - "1433:1433"
+    image: brianweet/alloydemokit-db:v2
     environment: 
       - ACCEPT_EULA=Y
       - sa_password=All0yDemokit!
-      - attach_dbs="[{'dbName':'alloydemokit','dbFiles':['C:\\alloydemokit.mdf','C:\\alloydemokit_log.ldf']}]"
     networks:
       - alloy-network
 networks:
