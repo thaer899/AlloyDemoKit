@@ -765,6 +765,11 @@
     <Content Include="App_Data\blobs\f36555b1157348b7b56d6f18b4d26427\0a3b3bfc98c644458cf557c98a999c1a.jpg" />
     <Content Include="App_Data\blobs\f6a3a8a724f2485ab27f2391820d8a56\36444e66f2354570b131138f502e14d4.png" />
     <Content Include="App_Data\blobs\f8f1151bbfcf4914a5a252bc745d4708\17183bbd93a049bb9911f4baeebeff3e.png" />
+    <Content Include="App_Data\DefaultSiteContent.episerverdata" />
+    <Content Include="App_Data\EPiServerDB_aefc3fcd.mdf" />
+    <Content Include="App_Data\EPiServerDB_aefc3fcd_log.ldf">
+      <DependentUpon>EPiServerDB_aefc3fcd.mdf</DependentUpon>
+    </Content>
     <Content Include="ClientResources\Images\icons\pdf-icon16x16.png" />
     <Content Include="ClientResources\Images\icons\pdf-icon32x32.png" />
     <Content Include="ClientResources\Styles\ContentColabFix.css" />
@@ -776,6 +781,7 @@
     <Content Include="favicon.ico" />
     <Content Include="App_Data\GeoLiteCity.dat" />
     <Content Include="App_Data\blobs\aabc21c6692a403ba2b8f01a08c2385a\99c17d4d4d32484a9532c1ab8dcd300c.docx" />
+    <Content Include="App_Data\EPiServerErrors.log" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -1053,7 +1059,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\DefaultSiteContent.episerverdata" />
     <None Include="EPiServerLog.config">
       <SubType>Designer</SubType>
     </None>

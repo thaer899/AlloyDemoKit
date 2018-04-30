@@ -2,24 +2,10 @@ version: '3'
 
 services:
   alloydemokit:
-    image: brianweet/alloydemokit:v2
+    image: brianweet/alloydemokit:sql-express
     build:
       context: .\AlloyDemoKit
       dockerfile: Dockerfile
-    networks:
-      - alloy-network
-  alloydemokit-db:
-    image: brianweet/alloydemokit-db:v2
-    build:
-      context: .
-      dockerfile: ./Database/Dockerfile
-    ports:
-      - "1433:1433"
-    environment: 
-      - ACCEPT_EULA=Y
-      - sa_password=All0yDemokit!
-    volumes:
-      - ./AlloyDemoKit/App_Data:C:/data/
     networks:
       - alloy-network
 networks:
