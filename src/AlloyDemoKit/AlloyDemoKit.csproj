@@ -31,6 +31,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <Use64BitIISExpress />
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -675,6 +676,112 @@
     <Content Include="AddOns\Core\SearchAndReplace.aspx" />
     <Content Include="AddOns\Core\TimeMachine.aspx" />
     <Content Include="AdminTools\EmployeeSettings.aspx" />
+    <Content Include="App_Data\blobs\01b9e180dbad446fa5b1790ff7ac0a17\7dc53b1842e240979311291983a7ae66.png" />
+    <Content Include="App_Data\blobs\01cad19a998e4be48a3a4eb33c46b948\5af56c1426724c0ca388e9c2ea6399d0.jpg" />
+    <Content Include="App_Data\blobs\01cad19a998e4be48a3a4eb33c46b948\5af56c1426724c0ca388e9c2ea6399d0_Thumbnail.jpg" />
+    <Content Include="App_Data\blobs\03ee8bc143b44b74a7d8ee6ffb8eb364\0b29c9305eda43dd83e3981a6ed3a82d.png" />
+    <Content Include="App_Data\blobs\0cb9c085f54f422299681d1612af4f4d\1b7ff31265d74bfda9f678559ad4b15c.jpg" />
+    <Content Include="App_Data\blobs\0cb9c085f54f422299681d1612af4f4d\1b7ff31265d74bfda9f678559ad4b15c_Thumbnail.png" />
+    <Content Include="App_Data\blobs\0e79f1df19364bccb5bdc8fd774d0f5a\75b9ce805d054490bca033587498917a.png" />
+    <Content Include="App_Data\blobs\0e79f1df19364bccb5bdc8fd774d0f5a\75b9ce805d054490bca033587498917a_Thumbnail.png" />
+    <Content Include="App_Data\blobs\199f046f221343efa70120e29cfd9902\364d4d07c3fa4f8db401ce9504688eec.png" />
+    <Content Include="App_Data\blobs\208423d374ba4f88894f1be2faaa5d99\25af2211d3d741c5841148d9c9dbf209.gif" />
+    <Content Include="App_Data\blobs\208423d374ba4f88894f1be2faaa5d99\25af2211d3d741c5841148d9c9dbf209_Thumbnail.png" />
+    <Content Include="App_Data\blobs\21d75f9a9d7b4effbc0fa4476946fa4e\3654f95ce9c243b88a097eafa064ebda.png" />
+    <Content Include="App_Data\blobs\21d75f9a9d7b4effbc0fa4476946fa4e\3654f95ce9c243b88a097eafa064ebda_Thumbnail.png" />
+    <Content Include="App_Data\blobs\21d75f9a9d7b4effbc0fa4476946fa4e\79964eb350b51cacdc2ea6990c93461d7fc41056.png" />
+    <Content Include="App_Data\blobs\2625fa53bf9e4583b276f1a2af10dcfc\14a448bd83c44587807a4aab90d730b1.png" />
+    <Content Include="App_Data\blobs\2d8a941d1c7245ce89fa986509899933\4744fa764ccc4f51876166ac614abe10.png" />
+    <Content Include="App_Data\blobs\2d8a941d1c7245ce89fa986509899933\4744fa764ccc4f51876166ac614abe10_Thumbnail.png" />
+    <Content Include="App_Data\blobs\36e5962856254d5f91fe82d418020afa\4e473727445d48b983ee4b7dd5900e83.png" />
+    <Content Include="App_Data\blobs\41762806b73b440a95a6c09489f4bd6b\1a8e1607451f46508bc92399484aac6b.png" />
+    <Content Include="App_Data\blobs\41762806b73b440a95a6c09489f4bd6b\1a8e1607451f46508bc92399484aac6b_Thumbnail.png" />
+    <Content Include="App_Data\blobs\437fa58c24924840ad617e2f6d065cc4\7e0637ed94d34711a656619e53f487e8.png" />
+    <Content Include="App_Data\blobs\43bb6be8ed2742cf9c5ba5d999f577e9\1d2e8fda4a944335b2f2fd05c1c0eec7.png" />
+    <Content Include="App_Data\blobs\4655068b318c47558fa484ff8b654e93\0f3aaa0a5dc3448c931563e781be9edb.png" />
+    <Content Include="App_Data\blobs\4655068b318c47558fa484ff8b654e93\0f3aaa0a5dc3448c931563e781be9edb_Thumbnail.png" />
+    <Content Include="App_Data\blobs\4655068b318c47558fa484ff8b654e93\a2396a65c1a87f8ffd10cf443c35c676683f3bff.png" />
+    <Content Include="App_Data\blobs\4655068b318c47558fa484ff8b654e93\cc8660ee058ab36fd721e687fc1633d50e768475.png" />
+    <Content Include="App_Data\blobs\50d7f4dbc8bc4f6799dd2252d7b8adbf\649294cc796f41929a1965718dffd37a.png" />
+    <Content Include="App_Data\blobs\59ef99d2a6944390acad6ceea90e5bdb\277d4b4c944047faa1ec131f82232bbb.jpg" />
+    <Content Include="App_Data\blobs\59ef99d2a6944390acad6ceea90e5bdb\277d4b4c944047faa1ec131f82232bbb_Thumbnail.png" />
+    <Content Include="App_Data\blobs\5b7ace2f93624bcbb6d63563ad39deea\6aac5786148544d1a3a07f17d223cf98.png" />
+    <Content Include="App_Data\blobs\5b7ace2f93624bcbb6d63563ad39deea\6aac5786148544d1a3a07f17d223cf98_Thumbnail.png" />
+    <Content Include="App_Data\blobs\631488811db9430789b88a534a3245b7\930770cbd8c9437da02cb1c0468945c2.jpg" />
+    <Content Include="App_Data\blobs\657d4939682c40db8949a285505f6e89\4f5f01fe279d4e468b5ac5334b34134f.png" />
+    <Content Include="App_Data\blobs\744020ce69ab435990e55a7f356cff3d\283693842e2ce0506d3e0f0f32fab45d91785e52.png" />
+    <Content Include="App_Data\blobs\744020ce69ab435990e55a7f356cff3d\3b493ee9988b432da2577c41b6e65281.png" />
+    <Content Include="App_Data\blobs\744020ce69ab435990e55a7f356cff3d\3b493ee9988b432da2577c41b6e65281_Thumbnail.png" />
+    <Content Include="App_Data\blobs\744020ce69ab435990e55a7f356cff3d\607ffd555aa91caf22e229663779bc94b8d9b095.png" />
+    <Content Include="App_Data\blobs\7efa0e21a938412eb236a0e93dc33724\723817a183ac4ada82e87421f1bf4033.png" />
+    <Content Include="App_Data\blobs\7efa0e21a938412eb236a0e93dc33724\723817a183ac4ada82e87421f1bf4033_Thumbnail.png" />
+    <Content Include="App_Data\blobs\80283b3047aa4e9ead1c03f72d1a18bb\73bc58da26334206b2fee86b6f7c0a65.png" />
+    <Content Include="App_Data\blobs\80283b3047aa4e9ead1c03f72d1a18bb\73bc58da26334206b2fee86b6f7c0a65_Thumbnail.png" />
+    <Content Include="App_Data\blobs\816384ad92f041efb1ce6ce85c79d5b2\ccdc110de0d64864b73fcb36c1b77a53.png" />
+    <Content Include="App_Data\blobs\8a541c8deb774a21bd69f1187d0c357a\c101fa5b5d844132bd6e0662c89fdd91.png" />
+    <Content Include="App_Data\blobs\8a541c8deb774a21bd69f1187d0c357a\c101fa5b5d844132bd6e0662c89fdd91_Thumbnail.png" />
+    <Content Include="App_Data\blobs\8c9556d83f784b1391790e1b6f55d81b\750b131e20c446d99e34894bf9632a03.jpg" />
+    <Content Include="App_Data\blobs\8c9556d83f784b1391790e1b6f55d81b\750b131e20c446d99e34894bf9632a03_Thumbnail.png" />
+    <Content Include="App_Data\blobs\8d184855f07c410e96f1f64e93e10b5e\492b190452624d6f8a805b37957097b5.png" />
+    <Content Include="App_Data\blobs\8d184855f07c410e96f1f64e93e10b5e\492b190452624d6f8a805b37957097b5_Thumbnail.png" />
+    <Content Include="App_Data\blobs\8d7e7cf79c9448a8a023d8861a899cb0\e6b6a9b869714ea485f3fd17c38b537f.png" />
+    <Content Include="App_Data\blobs\8e796ba2524a4f68ab067e1ff843da41\9b9f5ae8b6864187887508e728ae551b.png" />
+    <Content Include="App_Data\blobs\8e796ba2524a4f68ab067e1ff843da41\9b9f5ae8b6864187887508e728ae551b_Thumbnail.png" />
+    <Content Include="App_Data\blobs\93ee7ed6dc0f478b9b51463b78b1c7ed\e5b75ca76f414e5a8a7b7ca19ee41841.png" />
+    <Content Include="App_Data\blobs\93ee7ed6dc0f478b9b51463b78b1c7ed\e5b75ca76f414e5a8a7b7ca19ee41841_Thumbnail.png" />
+    <Content Include="App_Data\blobs\94164e43b59342fe89e69eca854596c3\1a30995ad237cbf6b9bf4fb1f3d3224ced6aa109.jpg" />
+    <Content Include="App_Data\blobs\94164e43b59342fe89e69eca854596c3\642752e9ab914dbc8bfbff7b158c1a0b.jpg" />
+    <Content Include="App_Data\blobs\97f449b2efad4f308ee9aa70d71b246a\0e06c4e11a794b428ab4f881663b88e8.png" />
+    <Content Include="App_Data\blobs\99d9256564454a83bfd6d904e7455468\2aedf124d98949208342b1ec395f07c3.png" />
+    <Content Include="App_Data\blobs\99d9256564454a83bfd6d904e7455468\2aedf124d98949208342b1ec395f07c3_Thumbnail.png" />
+    <Content Include="App_Data\blobs\9f90b3e624ac4971982c2766c404f8cf\8fbb14eb5b8948fd80cbe9b6484ad482.mp4" />
+    <Content Include="App_Data\blobs\a32b647c893c4398a53a4d34e9ed5323\ad15c26de9ae4961bb2684c9fc0e3a22.jpg" />
+    <Content Include="App_Data\blobs\b2ece9dbc4f64b4791c6d24a9e2d6879\1b92476c5d1d3db8ff0b3374247002f907920ce4.png" />
+    <Content Include="App_Data\blobs\b2ece9dbc4f64b4791c6d24a9e2d6879\5cb5b9e7332319a541a3a9d3641397d8706818a3.png" />
+    <Content Include="App_Data\blobs\b2ece9dbc4f64b4791c6d24a9e2d6879\6621f9288254d6721721c22ce6d279535fc4a47f.png" />
+    <Content Include="App_Data\blobs\b2ece9dbc4f64b4791c6d24a9e2d6879\7dba176dd85e4d898462b6f11111b163.png" />
+    <Content Include="App_Data\blobs\b2ece9dbc4f64b4791c6d24a9e2d6879\7dba176dd85e4d898462b6f11111b163_Thumbnail.png" />
+    <Content Include="App_Data\blobs\b2ece9dbc4f64b4791c6d24a9e2d6879\bbbb33b18156e17448c58deb364735d68a9e79f5.png" />
+    <Content Include="App_Data\blobs\b3b6afad936345e1acab6fa6fb4c4235\4e5447acdec14f9d9e64357b785304fd.png" />
+    <Content Include="App_Data\blobs\b4d9f002c81840fbab948991b14b7a38\6598d114649f403494a5e39ae0e52e12.png" />
+    <Content Include="App_Data\blobs\b4d9f002c81840fbab948991b14b7a38\6598d114649f403494a5e39ae0e52e12_Thumbnail.png" />
+    <Content Include="App_Data\blobs\b4d9f002c81840fbab948991b14b7a38\7cd1144600c2d2e34ba324ec70da507d7a51c6c6.png" />
+    <Content Include="App_Data\blobs\b4d9f002c81840fbab948991b14b7a38\c37a7e3ec353effe819bdd1f37c31a38390498c5.png" />
+    <Content Include="App_Data\blobs\b7d29755515f4cd881279d604dce7bc1\bd34e19f5c0f4a2ba1c1c8d5f01808ae.png" />
+    <Content Include="App_Data\blobs\be40b3e0617640d0b45cf698db51f9f1\f08006eb5ef94dcb812559722f8de4d0.jpg" />
+    <Content Include="App_Data\blobs\bf1907ed0a0c42d5bb4464131bd3ef19\1c27b076b0324f9daf043c86b5945d98.png" />
+    <Content Include="App_Data\blobs\bf1907ed0a0c42d5bb4464131bd3ef19\1c27b076b0324f9daf043c86b5945d98_Thumbnail.png" />
+    <Content Include="App_Data\blobs\c095d1744f784d8da5e9a495b20d74db\6594d4d75cda4bfa9bef5b51458b8734.jpg" />
+    <Content Include="App_Data\blobs\c095d1744f784d8da5e9a495b20d74db\6594d4d75cda4bfa9bef5b51458b8734_Thumbnail.png" />
+    <Content Include="App_Data\blobs\c566650d32e648179b1acb82fd03f3ed\4dedc89788ee494384aee0817b477ccd.png" />
+    <Content Include="App_Data\blobs\c566650d32e648179b1acb82fd03f3ed\4dedc89788ee494384aee0817b477ccd_Thumbnail.png" />
+    <Content Include="App_Data\blobs\ca55419ffd904d79827e555ec5554bb8\086ef963539a0aa331ffd5aee7c60257227ca780.png" />
+    <Content Include="App_Data\blobs\ca55419ffd904d79827e555ec5554bb8\1390a8aa2c424d73bf9a7d78ea69e8a8.png" />
+    <Content Include="App_Data\blobs\ca55419ffd904d79827e555ec5554bb8\1390a8aa2c424d73bf9a7d78ea69e8a8_Thumbnail.png" />
+    <Content Include="App_Data\blobs\ca55419ffd904d79827e555ec5554bb8\3f42737965a00249772f028e14b307acd56a5f0b.png" />
+    <Content Include="App_Data\blobs\cbccebed89e24e85bbd60fada9630ec4\24aabb606f8e45ebacb11665862837fa.png" />
+    <Content Include="App_Data\blobs\cbccebed89e24e85bbd60fada9630ec4\24aabb606f8e45ebacb11665862837fa_Thumbnail.png" />
+    <Content Include="App_Data\blobs\cdc4969e213a4875bdbe6ec9898073d0\415137265cd848ce8736d489f047c8c3.png" />
+    <Content Include="App_Data\blobs\cee5712079ae43ea81e1a25446ea3f7f\1fa054c231cd25c453b9d83369f1da1dd699fc65.png" />
+    <Content Include="App_Data\blobs\cee5712079ae43ea81e1a25446ea3f7f\21e448c7321965cc51aa27c2227435aed274f97a.png" />
+    <Content Include="App_Data\blobs\cee5712079ae43ea81e1a25446ea3f7f\63a69b2b9844435291323331b6a673ca.png" />
+    <Content Include="App_Data\blobs\cee5712079ae43ea81e1a25446ea3f7f\63a69b2b9844435291323331b6a673ca_Thumbnail.png" />
+    <Content Include="App_Data\blobs\de928f991e2541fbab65062eadb1f007\21a7a685e4b042419a18adb1a927c2163ea26337.png" />
+    <Content Include="App_Data\blobs\de928f991e2541fbab65062eadb1f007\78e08f306fc44c03888da8bab14fee3e.png" />
+    <Content Include="App_Data\blobs\de928f991e2541fbab65062eadb1f007\78e08f306fc44c03888da8bab14fee3e_Thumbnail.png" />
+    <Content Include="App_Data\blobs\de928f991e2541fbab65062eadb1f007\c29e093fc7c8ccc2e39d56a129868e391091dbff.png" />
+    <Content Include="App_Data\blobs\dfb51f3192d5450d9d18070fc0e5755d\9b4566cb57114c5d82f8b011b3317164.png" />
+    <Content Include="App_Data\blobs\e122af62288b4d24a114bf1e69bbea9f\eb53bd3a3bd442d98db93e8d2c3fc1af.png" />
+    <Content Include="App_Data\blobs\e3cced8c2fff49eca47c290fb2712efa\ecc95455fbcf46dfb11d8a8515dacf79.jpg" />
+    <Content Include="App_Data\blobs\e6a55a24cbac488ab8bc9dde1c6e705f\26d4468ea1a24ddcb287b129546bc9bb.png" />
+    <Content Include="App_Data\blobs\eaed3c000bf2480f99e5e6d0ff66f6cb\92c46e048fef43d6978fb9afed9f5aaa.jpg" />
+    <Content Include="App_Data\blobs\f36555b1157348b7b56d6f18b4d26427\0a3b3bfc98c644458cf557c98a999c1a.jpg" />
+    <Content Include="App_Data\blobs\f6a3a8a724f2485ab27f2391820d8a56\36444e66f2354570b131138f502e14d4.png" />
+    <Content Include="App_Data\blobs\f8f1151bbfcf4914a5a252bc745d4708\17183bbd93a049bb9911f4baeebeff3e.png" />
+    <Content Include="App_Data\EPiServerDB_aefc3fcd.mdf" />
+    <Content Include="App_Data\EPiServerDB_aefc3fcd_log.ldf">
+      <DependentUpon>EPiServerDB_aefc3fcd.mdf</DependentUpon>
+    </Content>
     <Content Include="ClientResources\Images\icons\pdf-icon16x16.png" />
     <Content Include="ClientResources\Images\icons\pdf-icon32x32.png" />
     <Content Include="ClientResources\Styles\ContentColabFix.css" />
@@ -692,6 +799,12 @@
     <Content Include="config\imageprocessor\cache.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\blobs\aabc21c6692a403ba2b8f01a08c2385a\99c17d4d4d32484a9532c1ab8dcd300c.docx" />
+    <Content Include="App_Data\GeoLiteCity.dat" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <None Include="Hunspellx64.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -928,7 +1041,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\DefaultSiteContent.episerverdata" />
     <None Include="EPiServerLog.config">
       <SubType>Designer</SubType>
     </None>
@@ -1048,6 +1160,7 @@
     <Content Include="modules\_protected\EPiServer.Forms\EPiServer.Forms.zip" />
     <Content Include="modules\_protected\EPiServer.Forms.UI\module.config" />
     <Content Include="modules\_protected\EPiServer.Forms.UI\EPiServer.Forms.UI.zip" />
+    <Content Include="License.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  alloydemokit:
+    image: ${DOCKER_REGISTRY-}alloydemokit
+    build:
+      context: .\AlloyDemoKit
+      dockerfile: Dockerfile

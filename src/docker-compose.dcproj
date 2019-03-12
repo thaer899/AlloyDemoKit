@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Windows</DockerTargetOS>
+    <ProjectGuid>b43f17e1-8d1a-448e-8bd2-9648c1366b6b</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
+    <DockerServiceName>alloydemokit</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+  </ItemGroup>
+</Project>
