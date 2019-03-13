@@ -6,3 +6,18 @@ services:
     build:
       context: .\AlloyDemoKit
       dockerfile: Dockerfile
+    networks:
+      - alloy-network
+  alloydemokit-gpt-2:
+    image: ${DOCKER_REGISTRY-}alloydemokit-gpt-2
+    ports:
+      - "5000:5000"
+    build:
+      context: .\gpt-2
+      dockerfile: Dockerfile.cpu
+    networks:
+      - alloy-network
+networks:
+  alloy-network:
+    external:
+      name: nat
