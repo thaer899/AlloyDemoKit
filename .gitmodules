@@ -1,3 +1,6 @@
 [submodule "src/gpt-2"]
 	path = src/gpt-2
 	url = git@github.com:brianweet/gpt-2.git
+[submodule "src/AlloyDemoKit/AI/epi-tinymce-ai-plugin"]
+	path = src/AlloyDemoKit/AI/epi-tinymce-ai-plugin
+	url = git@github.com:brianweet/epi-tinymce-ai-plugin.git

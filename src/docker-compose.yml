@@ -10,11 +10,13 @@ services:
       - alloy-network
   alloydemokit-gpt-2:
     image: ${DOCKER_REGISTRY-}alloydemokit-gpt-2
-    ports:
-      - "5000:5000"
+# Uncomment to expose the port to allow direct communication
+# For example from your host browser
+#    ports:
+#      - "5000:5000"
     build:
       context: .\gpt-2
-      dockerfile: Dockerfile.cpu
+      dockerfile: Dockerfile
     networks:
       - alloy-network
 networks:

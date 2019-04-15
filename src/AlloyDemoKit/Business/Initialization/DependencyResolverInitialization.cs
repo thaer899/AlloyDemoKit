@@ -1,11 +1,13 @@
-using System.Web.Mvc;
+using AlloyDemoKit.Business.Data;
+using AlloyDemoKit.Business.Rendering;
+using EPiServer.Cms.TinyMce.Core;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
-using AlloyDemoKit.Business.Rendering;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
-using AlloyDemoKit.Business.Data;
+using System;
+using System.Web.Mvc;
 
 namespace AlloyDemoKit.Business.Initialization
 {
@@ -24,6 +26,13 @@ namespace AlloyDemoKit.Business.Initialization
                     .AddTransient<ContentAreaRenderer, AlloyContentAreaRenderer>()
                     .AddTransient<IFileDataImporter, FileDataImporter>();
 
+                // Init
+                context.Services.Configure<TinyMceConfiguration>(config =>
+                {
+                    config.Default()
+                        .AddExternalPlugin("epi-tinymce-ai-plugin", "/AI/epi-tinymce-ai-plugin/dist/epi-tinymce-ai-plugin/plugin.js")
+                        .AppendToolbar("epi-tinymce-ai-plugin");
+                });
             };
         }
 

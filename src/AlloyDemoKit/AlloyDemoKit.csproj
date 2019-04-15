@@ -471,6 +471,7 @@
     <Compile Include="AdminTools\EmployeeSettings.aspx.designer.cs">
       <DependentUpon>EmployeeSettings.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AI\Models\GeneratedContentResult.cs" />
     <Compile Include="Business\Blog\BlogPartialRouter.cs" />
     <Compile Include="Business\Blog\BlogTagInitialization.cs" />
     <Compile Include="Business\Blog\TagFactory.cs" />
@@ -513,6 +514,7 @@
     <Compile Include="Business\Initialization\FileBasedEventsInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
     <Compile Include="Business\Initialization\GlobalNewsContentProviderInitialization.cs" />
+    <Compile Include="Business\Initialization\WebApiInitialization.cs" />
     <Compile Include="Business\PageContextActionFilter.cs" />
     <Compile Include="Business\PageTypeExtensions.cs" />
     <Compile Include="Business\PageViewContextFactory.cs" />
@@ -547,6 +549,7 @@
     <Compile Include="Business\VisitorGroupUIStyling\OutputProcessorActionFilterAttribute.cs" />
     <Compile Include="Business\VisitorGroupUIStyling\OverrideVisitorGroupCss.cs" />
     <Compile Include="Business\VisitorGroupUIStyling\OverrideVisitorGroupStylingInit.cs" />
+    <Compile Include="AI\ContentEditorApiController.cs" />
     <Compile Include="Controllers\BlogItemController.cs" />
     <Compile Include="Controllers\BlogListBlockController.cs" />
     <Compile Include="Controllers\BlogStartPageController.cs" />
@@ -676,6 +679,10 @@
     <Content Include="AddOns\Core\SearchAndReplace.aspx" />
     <Content Include="AddOns\Core\TimeMachine.aspx" />
     <Content Include="AdminTools\EmployeeSettings.aspx" />
+    <Content Include="AI\epi-tinymce-ai-plugin\dist\epi-tinymce-ai-plugin\changelog.txt" />
+    <Content Include="AI\epi-tinymce-ai-plugin\dist\epi-tinymce-ai-plugin\plugin.js" />
+    <Content Include="AI\epi-tinymce-ai-plugin\dist\epi-tinymce-ai-plugin\plugin.min.js" />
+    <Content Include="AI\epi-tinymce-ai-plugin\dist\epi-tinymce-ai-plugin\version.txt" />
     <Content Include="App_Data\blobs\01b9e180dbad446fa5b1790ff7ac0a17\7dc53b1842e240979311291983a7ae66.png" />
     <Content Include="App_Data\blobs\01cad19a998e4be48a3a4eb33c46b948\5af56c1426724c0ca388e9c2ea6399d0.jpg" />
     <Content Include="App_Data\blobs\01cad19a998e4be48a3a4eb33c46b948\5af56c1426724c0ca388e9c2ea6399d0_Thumbnail.jpg" />
