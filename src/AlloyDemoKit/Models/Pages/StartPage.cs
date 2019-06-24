@@ -64,6 +64,7 @@ namespace AlloyDemoKit.Models.Pages
 
         [Display(GroupName = Global.GroupNames.SiteSettings)]
         public virtual SiteLogotypeBlock SiteLogotype { get; set; }
+        public virtual ContentReference MappedContent { get; set; }
 
     }
 }
