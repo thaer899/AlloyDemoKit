@@ -6,6 +6,10 @@ using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using System;
 using System.Collections.Specialized;
+using System.Linq;
+using EPiServer;
+using EPiServer.Configuration;
+using EPiServer.Security;
 
 namespace AlloyDemoKit.Business
 {
@@ -14,6 +18,7 @@ namespace AlloyDemoKit.Business
         private readonly IdentityMappingService _identityMappingService;
         private readonly IContentTypeRepository _contentTypeRepository;
         private readonly IContentFactory _contentFactory;
+        private readonly IContentLoader _contentLoader;
 
         public const string Key = "mapped-content-provider";
         public override string ProviderKey => Key;
@@ -21,11 +26,13 @@ namespace AlloyDemoKit.Business
         public MappedContentProvider(
             IdentityMappingService identityMappingService,
             IContentTypeRepository contentTypeRepository,
-            IContentFactory contentFactory)
+            IContentFactory contentFactory,
+            IContentLoader contentLoader)
         {
             _identityMappingService = identityMappingService;
             _contentTypeRepository = contentTypeRepository;
             _contentFactory = contentFactory;
+            _contentLoader = contentLoader;
         }
 
         protected override IContent LoadContent(ContentReference contentLink, ILanguageSelector languageSelector)
@@ -33,7 +40,11 @@ namespace AlloyDemoKit.Business
             var mappedIdentity = _identityMappingService.Get(contentLink);
             var compositeId = mappedIdentity.ExternalIdentifier.Segments[1];
             var type = _contentTypeRepository.Load(typeof(TestExportData));
-            var testExportData = _contentFactory.CreateContent(type) as TestExportData;
+            var testExportData = _contentFactory.CreateContent(type, new BuildingContext(type)
+            {
+                Parent = _contentLoader.Get<ContentFolder>(EntryPoint)
+            }) as TestExportData;
+
             testExportData.ContentTypeID = type.ID;
             testExportData.ContentLink = mappedIdentity.ContentLink;
             testExportData.ContentGuid = mappedIdentity.ContentGuid;
@@ -64,16 +75,33 @@ namespace AlloyDemoKit.Business
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
     public class MappedContentInitialization : IInitializableModule
     {
+        private ContentRootService _contentRootService;
+        private IContentSecurityRepository _contentSecurityRepository;
+
+        private const string RootName = "Mapped content root";
+        private static readonly Guid RootGuid = new Guid("{DBAAAB73-39CA-4F02-A805-9A332EAD6376}");
+        public static ContentReference Root;
+
         /// <summary>
         /// Initialize content provider
         /// </summary>
         /// <param name="context"></param>
         public void Initialize(InitializationEngine context)
         {
+            _contentRootService = context.Locate.Advanced.GetInstance<ContentRootService>();
+            _contentSecurityRepository = context.Locate.Advanced.GetInstance<IContentSecurityRepository>();
+
+            Root = CreateRootFolder(RootName, RootGuid);
+
+            var providerValues = new NameValueCollection
+            {
+                { ContentProviderElement.EntryPointString, Root.ToString() }
+            };
+
             var mappedContentProvider = context.Locate.Advanced.GetInstance<MappedContentProvider>();
             var providerManager = context.Locate.Advanced.GetInstance<IContentProviderManager>();
 
-            mappedContentProvider.Initialize(MappedContentProvider.Key, new NameValueCollection());
+            mappedContentProvider.Initialize(MappedContentProvider.Key, providerValues);
             providerManager.ProviderMap.AddProvider(mappedContentProvider);
         }
 
@@ -88,5 +116,30 @@ namespace AlloyDemoKit.Business
 
             providerManager.ProviderMap.RemoveProvider(MappedContentProvider.Key);
         }
+
+        private ContentReference CreateRootFolder(string rootName, Guid rootGuid)
+        {
+            _contentRootService.Register<ContentFolder>(rootName, rootGuid, ContentReference.RootPage);
+
+            var fieldRoot = _contentRootService.Get(rootName);
+            if (!(_contentSecurityRepository.Get(fieldRoot).CreateWritableClone() is IContentSecurityDescriptor
+                securityDescriptor))
+            {
+                return fieldRoot;
+            }
+            securityDescriptor.IsInherited = false;
+
+            var everyoneEntry = securityDescriptor.Entries.FirstOrDefault(e =>
+                e.Name.Equals("everyone", StringComparison.InvariantCultureIgnoreCase));
+            if (everyoneEntry == null)
+            {
+                return fieldRoot;
+            }
+
+            securityDescriptor.RemoveEntry(everyoneEntry);
+            _contentSecurityRepository.Save(fieldRoot, securityDescriptor, SecuritySaveType.Replace);
+            return fieldRoot;
+        }
+
     }
 }
